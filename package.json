@@ -1,0 +1,15 @@
+{
+  "name": "programmierprojekt-ss23---gruppe-12---simulator-fuer-turing-maschinen",
+  "version": "1.0.0",
+  "description": "Simulator für Turingmaschinen",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.student.fiw.fhws.de:8443/scm/prgprojss23/programmierprojekt-ss23---gruppe-12---simulator-fuer-turing-maschinen.git"
+  },
+  "author": "",
+  "license": "ISC"
+}
