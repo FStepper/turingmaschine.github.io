@@ -2,10 +2,11 @@
   "name": "programmierprojekt-ss23---gruppe-12---simulator-fuer-turing-maschinen",
   "version": "1.0.0",
   "description": "Simulator für Turingmaschinen",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "npx eslint . --ext .js --ext .ts --fix",
+    "start": "electron .",
     "build": "npx tsc"
   },
   "repository": {
@@ -19,6 +20,7 @@
     "@typescript-eslint/parser": "^5.57.0",
     "@typescript-eslint/types": "^5.57.0",
     "eslint": "^8.36.0",
-    "typescript": "^5.0.2"
+    "typescript": "^5.0.2",
+    "electron": "^23.2.0"
   }
 }
