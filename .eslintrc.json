@@ -97,10 +97,6 @@
         "no-irregular-whitespace": [
             "error"
         ],
-        "space-after-keywords": [
-            "error",
-            "always"
-        ],
         "semi-spacing": [
             "error"
         ],
