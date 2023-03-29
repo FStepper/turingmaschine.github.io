@@ -4,7 +4,8 @@
   "description": "Simulator für Turingmaschinen",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "npx tsc"
   },
   "repository": {
     "type": "git",
@@ -12,6 +13,9 @@
   },
   "author": "",
   "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.0.2"
+  },
   "devDependencies": {
     "electron": "^23.2.0"
   }
