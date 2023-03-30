@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "npx eslint . --ext .js --ext .ts --fix",
     "start": "electron .",
-    "build": "npx tsc"
+    "build": "npx tsc",
+    "build-macOS": "npx electron-packager . --overwrite --platform=darwin --arch=x64 --prune=true --out=release-builds"
   },
   "repository": {
     "type": "git",
