@@ -1,4 +1,4 @@
-/*class Person {
+class Person {
   name: string;
   age: number;
 
@@ -12,11 +12,10 @@
   }
 }
 
-const john = new Person('John', 30);*/
-
+const john = new Person('John', 30);
 const outputElement = document.getElementById('output');
 if (outputElement) {
-  outputElement.innerHTML = "sdfghjklfdsadesrtzjkulijhkgjfhdgsfg";
+  outputElement.innerHTML = john.introduce();
 }
 
-alert("adsfghfgj")
+alert("test alert")
