@@ -11,7 +11,7 @@ app.on("ready", () => {
 
   //const indexHTML = path.join(__dirname + "/");
   win
-    .loadFile("dist/index.html")
+    .loadFile("dist/app/index.html")
     .then(() => {
         console.log('index.html loadad');
     })
