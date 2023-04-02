@@ -2,14 +2,33 @@
   "name": "programmierprojekt-ss23---gruppe-12---simulator-fuer-turing-maschinen",
   "version": "1.0.0",
   "description": "Simulator für Turingmaschinen",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "npx eslint . --ext .js --ext .ts --fix",
+    "start": "electron .",
+    "copyStyleFolder": "copyfiles -f src/style/* dist/style",
+    "copyAppFolder": "copyfiles -f src/app/* dist/app",
+    "build": "npx tsc && npm run copyAppFolder && npm run copyStyleFolder",
+    "build-macOS": "npx electron-packager . Turingmaschine --overwrite --platform=darwin --arch=x64 --prune=true --out=release-builds",
+    "build-windows": "npx electron-packager . Turingmaschine --overwrite --platform=win32 --arch=x64 --prune=true --out=release-builds",
+    "build-linux": "npx electron-packager . Turingmaschine --overwrite --platform=linux --arch=x64 --prunte=true --out=release-builds",
+    "build-all": "npm run build && npm run build-macOS && npm run build-windows && npm run build-linux"
   },
   "repository": {
     "type": "git",
     "url": "https://bitbucket.student.fiw.fhws.de:8443/scm/prgprojss23/programmierprojekt-ss23---gruppe-12---simulator-fuer-turing-maschinen.git"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.57.0",
+    "@typescript-eslint/parser": "^5.57.0",
+    "@typescript-eslint/types": "^5.57.0",
+    "electron": "^23.2.0",
+    "electron-packager": "^17.1.1",
+    "eslint": "^8.36.0",
+    "copyfiles": "^2.4.1",
+    "typescript": "^5.0.2"
+  }
 }
