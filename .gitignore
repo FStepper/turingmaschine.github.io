@@ -1,5 +1,10 @@
+# build artifacts
 node_modules
 dist
 release-builds
-#Auto generated mac-file
+
+# test files
+coverage
+
+# auto generated mac-file
 .DS_Store
