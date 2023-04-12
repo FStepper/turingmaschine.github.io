@@ -1,0 +1,19 @@
+/*
+    Standardeinstellungen entfernen
+ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    border: 0;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'Poppins', serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 1em;
+    line-height: 1.4;
+}
