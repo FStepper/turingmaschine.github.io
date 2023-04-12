@@ -2,7 +2,7 @@
   "name": "programmierprojekt-ss23---gruppe-12---simulator-fuer-turing-maschinen",
   "version": "1.0.0",
   "description": "Simulator für Turingmaschinen",
-  "main": "dist/index.js",
+  "main": "dist/scripts/index.js",
   "scripts": {
     "test": "jest",
     "lint": "npx eslint . --ext .js --ext .ts --fix",
