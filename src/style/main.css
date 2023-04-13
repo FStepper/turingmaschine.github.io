@@ -4,20 +4,23 @@
 
    ========================================================================== */
  :root {
-     --website-background: #fff;
+    --website-background: #fff;
 
-     --text-color-dark: #000;
-     --text-color-semi-dark: #666666;
-     --text-color-light: #ffffff;
+    --text-color-dark: #000;
+    --text-color-semi-dark: #666666;
+    --text-color-light: #ffffff;
 
-     --sidebar: #ff0000;
-     --topbar: #00ff00;
+    --primary-color: #FF6A00;
+    --secondary-color: #d7d7d7;
 
-     --top-bar-height: 76px;
+    --sidebar-color: white;
+    --topbar-color: white;
 
-     --spacing: 20px;
+    --top-bar-height: 76px;
 
-     /*--border-radius-small: 8px;
+    --spacing: 20px;
+
+    /*--border-radius-small: 8px;
     --border-radius-medium: 12px;
     --border-radius-big: 20px;*/
  }
@@ -29,23 +32,24 @@
 
    ========================================================================== */
  * {
-     margin: 0;
-     padding: 0;
+    margin: 0;
+    padding: 0;
 
-     box-sizing: border-box;
-     outline: 0;
-     border: 0;
+    box-sizing: border-box;
+    outline: 0;
+    border: 0;
 
-     text-decoration: none;
-     font-size: 14px;
-     font-family: 'Poppins', serif;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'Inter', serif;
  }
 
- html {
-     scroll-behavior: smooth;
 
-     font-size: 1em;
-     line-height: 1.4;
+ html {
+    scroll-behavior: smooth;
+
+    font-size: 1em;
+    line-height: 1.4;
  }
 
 
@@ -55,19 +59,19 @@
 
    ========================================================================== */
  body {
-     display: grid;
+    display: grid;
 
-     grid-template-columns: 80px auto;
-     grid-template-rows: var(--top-bar-height) auto;
-     grid-template-areas:
-         "code text file-selection"
-         "sidebar content content";
+    grid-template-columns: 80px auto;
+    grid-template-rows: var(--top-bar-height) auto;
+    grid-template-areas:
+       "topbar topbar"
+       "sidebar content";
 
-     height: 100vh;
-     width: 100%;
+    height: 100vh;
+    width: 100%;
 
-     background-color: var(--website-background);
-     color: var(--text-color-dark);
+    background-color: var(--website-background);
+    color: var(--text-color-dark);
  }
 
 
@@ -77,14 +81,14 @@
 
    ========================================================================== */
  #content {
-     grid-area: content;
+    grid-area: content;
 
-     width: 100%;
-     height: 100%;
+    width: 100%;
+    height: 100%;
 
-     padding: var(--spacing);
+    padding: var(--spacing);
 
-     background-color: var(--website-background);
+    background-color: var(--website-background);
  }
 
 
@@ -95,63 +99,46 @@
    ========================================================================== */
 
  #sidebar {
-     grid-area: sidebar;
+    grid-area: sidebar;
 
-     display: flex;
-     flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
-     padding: var(--spacing);
+    padding: var(--spacing);
 
-     background-color: var(--sidebar);
+    background-color: var(--sidebar-color);
+    border-right: var(--primary-color) solid 1px;
  }
 
 
  /* ==========================================================================
-    Code
- 
+   Topbar 
 
    ========================================================================== */
- #code {
-     grid-area: code;
+ #topbar {
+    grid-area: topbar;
 
-     display: flex;
-     justify-content: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: row;
 
-     position: -webkit-sticky;
-     position: sticky;
-     top: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
 
-     z-index: 10;
+    width: 100%;
 
-     padding: var(--spacing);
+    z-index: 10;
 
-     background-color: var(--topbar);
+    padding: var(--spacing);
+
+    background-color: var(--topbar-color);
+    border-bottom: var(--secondary-color) solid 1px;
  }
 
-
- /* ==========================================================================
-    Text
- 
-
-   ========================================================================== */
- #text {
-     grid-area: text;
-
-     display: flex;
-     flex-direction: column;
-
-     height: 100%;
-
-     position: -webkit-sticky;
-     position: sticky;
-     top: 0;
-
-     z-index: 10;
-
-     padding: var(--spacing);
-
-     background-color: var(--topbar);
-     background-color: purple;
+ #thws-logo{
+   align-self: flex-start;
+   height: 80%;
  }
 
 
@@ -161,19 +148,19 @@
 
    ========================================================================== */
  #file-selection {
-     grid-area: file-selection;
+    /*grid-area: file-selection;*/
 
+    display: flex;
+    justify-content: right;
+    align-items: center;
 
-     display: flex;
-     justify-content: right;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
 
-     position: -webkit-sticky;
-     position: sticky;
-     top: 0;
+    z-index: 0;
 
-     z-index: 0;
+    padding: var(--spacing);
 
-     padding: var(--spacing);
-
-     background-color: var(--topbar);
+    background-color: var(--topbar-color);
  }

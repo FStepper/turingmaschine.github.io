@@ -8,58 +8,66 @@
 
     <title>THWS Turingsimulator</title>
 
-    <!--<script defer src="../page.js"></script>-->
-
     <link rel="stylesheet" href="../style/main.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Inter|Inter:300,400,500,700'>
 </head>
 
 <body>
     <!--
     Top bar
 -->
-
-    <!--
-        Logo
+    <div id="topbar">
+     <!-- 
+        Logo FIXME: Wrong code; Placeholder: Use SVG for Logo and Text 
     -->
-    <div id="code">
-        <img src="img/FH_Wuerzburg_Schweinfurt_Logo_weiss.svg" id="logo-img" alt="FHWS">
-    </div>
+     <!--<div id="thws-logo">  
+        <div id="thws-code">
+            <img src="../media/thws_code.svg" id="code-img" alt="thws code">
+        </div>
 
-    <div id="text">
-        <h1>turing-simulator.thws</h1>
-        <p>Technische Hochschule</p>
-        <p>Würzburg-Schweinfurt</p>
-    </div>
+        <div id="thws-text">
+            <p id="thws-text-title">turing-simulator.thws</p>
+            <pre class="thws-text-faculty">Fakultät Informatik und
+Wirtschaftsinformatik</pre>
+            <pre class="thws-text-advertised">Technische Hochschule
+Würzburg-Schweinfurt</pre>
+        </div> 
+        
+    </div>-->
+    <img src="../media/thws.svg" id="thws-logo" alt="thws logo">    
+
 
     <!--
         File selection
     -->
-    <div id="file-selection">
-        <div id="file-selection-div">
-            <p>Neue Turingmaschine</p>
-            <p>#12345623</p>
+        <div id="file-selection">
+            <div id="file-selection-div">
+                <p>Neue Turingmaschine</p>
+                <p>#12345623</p>
+            </div>
         </div>
+
     </div>
 
-    <!--
+        <!--
     SideBar
 -->
 
-    <div id="sidebar">
-        <button id="backwards-button">backwards</button>
-        <button id="forwards-button">forwards</button>
+        <div id="sidebar">
+            <button id="backwards-button">backwards</button>
+            <button id="forwards-button">forwards</button>
 
-        <button id="settings-button">settings</button>
-    </div>
+            <button id="settings-button">settings</button>
+        </div>
 
 
-    <!--
+        <!--
     Content
 -->
 
-    <div id="content">
-        <h1>Here belongs the content</h1>
-    </div>
+        <div id="content">
+            <h1>Here belongs the content</h1>
+        </div>
 
 </body>
 
