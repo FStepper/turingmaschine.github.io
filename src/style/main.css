@@ -178,6 +178,20 @@
    margin: var(--spacing);
  }
 
+ [contenteditable="true"].editable-line {
+   white-space: nowrap;
+   width:200px;
+   overflow: hidden;
+} 
+[contenteditable="true"].editable-line br {
+   display:none;
+
+}
+[contenteditable="true"].editable-line * {
+   display:inline;
+   white-space:nowrap;
+}
+
 
  /* ==========================================================================
     Content
