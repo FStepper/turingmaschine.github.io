@@ -20,9 +20,9 @@
 
     --spacing: 20px;
 
-    /*--border-radius-small: 8px;
+    --border-radius-small: 8px;
     --border-radius-medium: 12px;
-    --border-radius-big: 20px;*/
+    --border-radius-big: 20px;
  }
 
 
@@ -72,23 +72,6 @@
 
     background-color: var(--website-background);
     color: var(--text-color-dark);
- }
-
-
- /* ==========================================================================
-    Content
- 
-
-   ========================================================================== */
- #content {
-    grid-area: content;
-
-    width: 100%;
-    height: 100%;
-
-    padding: var(--spacing);
-
-    background-color: var(--website-background);
  }
 
 
@@ -157,8 +140,6 @@
  */
 
  #file-selection {
-    /*grid-area: file-selection;*/
-
     display: flex;
     justify-content: right;
     align-items: center;
@@ -195,3 +176,66 @@
    transform: rotate(180deg);
    margin: var(--spacing);
  }
+
+
+ /* ==========================================================================
+    Content
+ 
+
+   ========================================================================== */
+#content {
+   grid-area: content;
+
+   width: 100%;
+   height: auto;
+
+   display: flex;
+   flex-direction: column;
+
+   background-color: var(--website-background);
+}
+
+
+ /* ==========================================================================
+    Simulator
+ 
+
+   ========================================================================== */
+#simulator {
+   width: 100%;
+
+   border-bottom: var(--secondary-color) solid 1px;
+}
+
+#simulator-tape {
+   height: 300px;
+
+   display: flex;
+   flex-direction: row;
+   align-content: space-around;
+   align-items: center;
+}
+
+#simulator-controls{
+   height: 60px;
+
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+
+   padding: var(--spacing);
+}
+
+#speed-controls {
+   display: flex;
+   flex-direction: column;
+}
+
+ /* ==========================================================================
+    Input
+ 
+
+   ========================================================================== */
+   #simulator-input {
+      
+   }
