@@ -17,6 +17,7 @@
     --topbar-color: white;
 
     --top-bar-height: 76px;
+    --side-bar-width: 80px;
 
     --spacing: 20px;
 
@@ -61,7 +62,7 @@
  body {
     display: grid;
 
-    grid-template-columns: 80px auto;
+    grid-template-columns: var(--side-bar-width) auto;
     grid-template-rows: var(--top-bar-height) auto;
     grid-template-areas:
        "topbar topbar"
@@ -102,7 +103,7 @@
 }
 
 #settings-button {
-
+   justify-self: flex-end;
 }
 
  /* ==========================================================================
@@ -208,7 +209,7 @@
 }
 
 #simulator-tape {
-   height: 300px;
+   height: 250px;
 
    display: flex;
    flex-direction: row;
@@ -236,6 +237,39 @@
  
 
    ========================================================================== */
-   #simulator-input {
-      
-   }
+#simulator-input {
+   height: auto;
+}
+
+/* ==========================================================================
+Footer
+
+
+   ========================================================================== */
+#views {
+   height: 30px;
+   width: calc(100vw - var(--side-bar-width));
+
+   display: flex;
+   flex-direction: row;
+   align-content: space-between;
+   align-items: center;
+
+   position: fixed;
+   
+   bottom: 0;
+   left: var(--side-bar-width);
+
+   background-color: var(--secondary-color);
+}
+
+#protocol-view, #diagram-view {
+   display: flex;
+   flex-direction: row;
+
+   margin: var(--spacing);
+}
+
+#views img {
+   margin-right: var(--spacing);
+}
