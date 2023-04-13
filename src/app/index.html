@@ -17,33 +17,22 @@
     Top bar
 -->
     <div id="topbar">
-     <!-- 
-        Logo FIXME: Wrong code; Placeholder: Use SVG for Logo and Text 
-    -->
-     <!--<div id="thws-logo">  
-        <div id="thws-code">
-            <img src="../media/thws_code.svg" id="code-img" alt="thws code">
-        </div>
 
-        <div id="thws-text">
-            <p id="thws-text-title">turing-simulator.thws</p>
-            <pre class="thws-text-faculty">Fakultät Informatik und
-Wirtschaftsinformatik</pre>
-            <pre class="thws-text-advertised">Technische Hochschule
-Würzburg-Schweinfurt</pre>
-        </div> 
-        
-    </div>-->
-    <img src="../media/thws.svg" id="thws-logo" alt="thws logo">    
+        <img src="../media/thws.svg" id="thws-logo" alt="thws logo">
 
-
-    <!--
-        File selection
-    -->
+        <!--
+            File selection
+        -->
         <div id="file-selection">
             <div id="file-selection-div">
-                <p>Neue Turingmaschine</p>
-                <p>#12345623</p>
+                <div id="file-selection-text">
+                    <p>Neue Turingmaschine</p>
+                    <div id="file-code">
+                        <img src="../media/hashtag.svg" alt="hashtag">
+                        <p contenteditable="true">12345623</p>
+                    </div>
+                </div>
+                <img src="../media/shape-triangle.svg" id="file-selection-expand" alt="triangle">
             </div>
         </div>
 
@@ -53,21 +42,21 @@ Würzburg-Schweinfurt</pre>
     SideBar
 -->
 
-        <div id="sidebar">
-            <button id="backwards-button">backwards</button>
-            <button id="forwards-button">forwards</button>
+    <div id="sidebar">
+        <img src="../media/backwards.svg" id="backwards-button" alt="backwards">
+        <img src="../media/forward.svg" id="forward-button" alt="forward">
 
-            <button id="settings-button">settings</button>
-        </div>
+        <img src="../media/menu-round.svg" id="settings-button" alt="settings">
+    </div>
 
 
         <!--
     Content
 -->
 
-        <div id="content">
-            <h1>Here belongs the content</h1>
-        </div>
+    <div id="content">
+        <h1>Here belongs the content</h1>
+    </div>
 
 </body>
 
