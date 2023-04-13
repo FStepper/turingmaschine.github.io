@@ -55,7 +55,30 @@
 -->
 
     <div id="content">
-        <h1>Here belongs the content</h1>
+        <!--
+            Tape
+        -->
+        <div id="simulator">
+            <div id="simulator-tape">
+                <p>Here goes the tape</p>
+            </div>
+            <div id="simulator-controls">
+                <div id="speed-controls">
+                    <label for="speed-slider-input"></label>
+                    <input id="speed-slider-input" type="range" min="0.5" max="10" step="0.1" value="1">
+                    <p id="speed-slider-label">1.0x</p>
+                </div>
+                <div id="tape-controls">
+                    <img src="../media/play-track-prev.svg" id="prev-step-button" alt="previous step">
+                    <img src="../media/play-button.svg" id="play-simulator-button" alt="play step">
+                    <img src="../media/play-track-next.svg" id="next-step-button" alt="next step">
+                </div>
+                <img src="../media/repeat.svg" id="reset-simulator-button" alt="reset">
+            </div>
+        </div>
+        <div id="simulator-input">
+        </div>
+        
     </div>
 
 </body>
