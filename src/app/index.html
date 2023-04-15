@@ -10,6 +10,8 @@
 
     <link rel="stylesheet" href="../style/main.css">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Inter|Inter:300,400,500,700'>
+
+    <script src="../scripts/main.js" defer></script>
 </head>
 
 <body>
@@ -60,7 +62,7 @@
         -->
         <div id="simulator">
             <div id="simulator-tape">
-                <p>Here goes the tape</p>
+                <h1>Here goes the tape</h1>
             </div>
             <div id="simulator-controls">
                 <div id="speed-controls">
@@ -77,7 +79,7 @@
             </div>
         </div>
         <div id="simulator-input">
-            <p>Here goes the table</p>
+            <h1>Here goes the table</h1>
         </div>
     </div>
 
@@ -85,13 +87,24 @@
             Views
         -->
     <div id="views">
-        <div id="protocol-view">
-            <img src="../media/eye.svg" id="show-protocol-button" alt="eye">
-            <p>Protokoll</p>
+        <div id="view-tabs">
+            <!--<div id="protocol-view-button" onclick="document.getElementById('protcol-view').toggleAttribute('hidden')">-->
+            <div id="protocol-view-button">
+                <img src="../media/eye.svg" id="show-protocol-button" alt="eye">
+                <p>Protokoll</p>
+            </div>
+            <div id="diagram-view-button">
+                <img src="../media/eye.svg" id="show-diagram-button" alt="eye">
+                <p>Diagramm</p>
+            </div>
         </div>
-        <div id="diagram-view">
-            <img src="../media/eye.svg" id="show-diagram-button" alt="eye">
-            <p>Diagramm</p>
+        <div id="views-view-area">
+            <div id="protcol-view" hidden>
+                <h1>Here goes the protocol</h1>
+            </div>
+            <div id="diagram-view" hidden>
+                <h1>Here goes the diagram</h1>
+            </div>
         </div>
     </div>
 
