@@ -48,7 +48,7 @@
 
 html {
    scroll-behavior: smooth;
-   overflow: hidden;
+   /*overflow: hidden;*/
 
    font-size: 1em;
    line-height: 1.4;
@@ -80,7 +80,7 @@ body {
 
  /* ==========================================================================
     Sidebar
- 
+
 
    ========================================================================== */
 
@@ -110,7 +110,7 @@ body {
 
 
  /* ==========================================================================
-   Topbar 
+   Topbar
 
    ========================================================================== */
 #topbar {
@@ -185,7 +185,7 @@ body {
    white-space: nowrap;
    width: 150px;
    overflow: hidden;
-} 
+}
 [contenteditable="true"].editable-line br {
    display: none;
 
@@ -198,7 +198,7 @@ body {
 
  /* ==========================================================================
     Content
- 
+
 
    ========================================================================== */
 #content {
@@ -216,7 +216,7 @@ body {
 
  /* ==========================================================================
     Simulator
- 
+
 
    ========================================================================== */
 #simulator {
@@ -253,7 +253,7 @@ body {
 
  /* ==========================================================================
     Input
- 
+
 
    ========================================================================== */
 #simulator-input {
@@ -275,26 +275,65 @@ Footer
 
    ========================================================================== */
 #views {
-   grid-area: views;
+   /*grid-area: views;*/
    height: 30px;
    width: calc(100vw - var(--side-bar-width));
 
-   align-self: flex-end;
+   /*align-self: flex-end;
+   justify-self: flex-end;
+   place-self: flex-end;*/
 
    display: flex;
-   align-content: space-between; /*FIXME: space-between is not working, so one element is at the left the other on the right*/
-   align-items: center;
+   flex-direction: column;
+
+   position: fixed;
+   bottom: 0;
+   left: var(--side-bar-width);
+
+
+   cursor: pointer;
+   transition: height 0.5s ease-in-out;
 
    background-color: var(--secondary-color);
 }
 
-#protocol-view, #diagram-view {
-   display: flex;
-
-   margin: var(--spacing);
-   background-color: blue;
+#views.expanded {
+   height: 200px;
 }
 
-#views img {
+#view-tabs {
+   display: flex;
+   flex-direction: row;
+   align-content: space-evenly; /*FIXME: space-between is not working, so one element is at the left the other on the right*/
+   align-items: center;
+}
+
+#protocol-view-button, #diagram-view-button {
+   display: flex;
+}
+
+#protocol-view-button img, #diagram-view-button img {
    margin-right: var(--spacing);
+}
+
+#protcol-view, #diagram-view {
+   height: 300px;
+   width: 100%;
+
+   padding: var(--spacing);
+
+   background-color: var(--secondary-color);
+}
+
+#protcol-view {
+   border-right: #666666 solid 1px;
+}
+
+#views-view-area {
+   display: flex;
+   flex-direction: row;
+   align-content: space-evenly; 
+   align-items: center;
+
+   height: 300px;
 }
