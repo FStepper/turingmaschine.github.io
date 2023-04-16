@@ -48,7 +48,7 @@
 
 html {
    scroll-behavior: smooth;
-   /*overflow: hidden;*/
+   overflow: hidden;
 
    font-size: 1em;
    line-height: 1.4;
@@ -289,9 +289,8 @@ Footer
    position: fixed;
    bottom: 0;
    left: var(--side-bar-width);
+   resize: vertical;
 
-
-   cursor: pointer;
    transition: height 0.5s ease-in-out;
 
    background-color: var(--secondary-color);
@@ -299,6 +298,10 @@ Footer
 
 #views.expanded {
    height: 200px;
+}
+
+#views.expanded #view-tabs{
+   cursor: n-resize;
 }
 
 #view-tabs {
@@ -310,19 +313,29 @@ Footer
 
 #protocol-view-button, #diagram-view-button {
    display: flex;
+   margin-left: var(--spacing);
+   
+   cursor: pointer;
 }
 
 #protocol-view-button img, #diagram-view-button img {
-   margin-right: var(--spacing);
+   margin-right: 5px;
 }
 
 #protcol-view, #diagram-view {
-   height: 300px;
+   overflow: visible;
+
+   /*height: 300px;*/
    width: 100%;
+   flex-shrink: 50%;
 
    padding: var(--spacing);
 
    background-color: var(--secondary-color);
+}
+
+#protocol-view-content, #diagram-view-content{
+
 }
 
 #protcol-view {
@@ -332,8 +345,8 @@ Footer
 #views-view-area {
    display: flex;
    flex-direction: row;
-   align-content: space-evenly; 
-   align-items: center;
+   align-content: space-around; 
+   align-items: start;
 
-   height: 300px;
+   /*height: 300px;*/
 }
