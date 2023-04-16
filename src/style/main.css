@@ -105,7 +105,7 @@ body {
 }
 
 #settings-button {
-   justify-self: flex-end; /*FIXME: flex-end is not working, to move the settings button to the bottom*/
+   margin-top: auto;
 }
 
 
@@ -291,16 +291,12 @@ Footer
    left: var(--side-bar-width);
    resize: vertical;
 
-   transition: height 0.5s ease-in-out;
+   transition: height 0s ease-in-out;
 
    background-color: var(--secondary-color);
 }
 
-#views.expanded {
-   height: 200px;
-}
-
-#views.expanded #view-tabs{
+#views.expanded #view-tabs {
    cursor: n-resize;
 }
 
@@ -318,6 +314,10 @@ Footer
    cursor: pointer;
 }
 
+#diagram-view-button {
+   margin-left: 46%;
+}
+
 #protocol-view-button img, #diagram-view-button img {
    margin-right: 5px;
 }
@@ -325,17 +325,12 @@ Footer
 #protcol-view, #diagram-view {
    overflow: visible;
 
-   /*height: 300px;*/
    width: 100%;
    flex-shrink: 50%;
 
    padding: var(--spacing);
 
    background-color: var(--secondary-color);
-}
-
-#protocol-view-content, #diagram-view-content{
-
 }
 
 #protcol-view {
@@ -348,5 +343,5 @@ Footer
    align-content: space-around; 
    align-items: start;
 
-   /*height: 300px;*/
+   overflow: auto;
 }
