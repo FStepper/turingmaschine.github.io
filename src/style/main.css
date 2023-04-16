@@ -1,3 +1,4 @@
+ /*#region Defaults*/
  /* ==========================================================================
    Defaults
 
@@ -25,10 +26,11 @@
    --border-radius-medium: 12px;
    --border-radius-big: 20px;
 }
+/*#endregion */
 
-
+/*#region default website settings*/
  /* ==========================================================================
-    Standardeinstellungen entfernen
+   remove default settings
 
 
    ========================================================================== */
@@ -53,8 +55,9 @@ html {
    font-size: 1em;
    line-height: 1.4;
 }
+/*#endregion*/
 
-
+/*#region Grid*/
  /* ==========================================================================
     Grid
 
@@ -76,8 +79,9 @@ body {
    background-color: var(--website-background);
    color: var(--text-color-dark);
 }
+/*#endregion*/
 
-
+/*#region Sidebar*/
  /* ==========================================================================
     Sidebar
 
@@ -107,8 +111,9 @@ body {
 #settings-button {
    margin-top: auto;
 }
+/*#endregion*/
 
-
+/*#region Topbar*/
  /* ==========================================================================
    Topbar
 
@@ -139,6 +144,7 @@ body {
    height: 80%;
 }
 
+/*#region File selection*/
  /*
    File selection
  */
@@ -194,8 +200,10 @@ body {
    display: inline;
    white-space: nowrap;
 }
+/*#endregion*/
+/*#endregion*/
 
-
+/*#region Content*/
  /* ==========================================================================
     Content
 
@@ -212,8 +220,9 @@ body {
 
    background-color: var(--website-background);
 }
+/*#endregion*/
 
-
+/*#region Simulator*/
  /* ==========================================================================
     Simulator
 
@@ -249,10 +258,11 @@ body {
    display: flex;
    flex-direction: column;
 }
+/*#endregion*/
 
-
+/*#region Simulator input*/
  /* ==========================================================================
-    Input
+    Simulator input
 
 
    ========================================================================== */
@@ -267,8 +277,9 @@ body {
 
    margin: var(--spacing);
 }
+/*#endregion*/
 
-
+/*#region Views (protocol view, diagram view)*/
 /* ==========================================================================
 Footer
 
@@ -345,3 +356,4 @@ Footer
 
    overflow: auto;
 }
+/*#endregion*/
