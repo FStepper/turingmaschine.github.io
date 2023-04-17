@@ -1,4 +1,4 @@
-import { Person } from "../scripts/page";
+import { Person } from "../scripts/Person";
 
 describe("average person",() => {
 	test("person to exist", () => {
