@@ -1,0 +1,359 @@
+ /*#region Defaults*/
+ /* ==========================================================================
+   Defaults
+
+
+   ========================================================================== */
+:root {
+   --website-background: #fff;
+
+   --text-color-dark: #000;
+   --text-color-semi-dark: #666666;
+   --text-color-light: #ffffff;
+
+   --primary-color: #FF6A00;
+   --secondary-color: #d7d7d7;
+
+   --sidebar-color: white;
+   --topbar-color: white;
+
+   --top-bar-height: 76px;
+   --side-bar-width: 80px;
+
+   --spacing: 20px;
+
+   --border-radius-small: 8px;
+   --border-radius-medium: 12px;
+   --border-radius-big: 20px;
+}
+/*#endregion */
+
+/*#region default website settings*/
+ /* ==========================================================================
+   remove default settings
+
+
+   ========================================================================== */
+* {
+   margin: 0;
+   padding: 0;
+
+   box-sizing: border-box;
+   outline: 0;
+   border: 0;
+
+   text-decoration: none;
+   font-size: 14px;
+   font-family: 'Inter', serif;
+}
+
+
+html {
+   scroll-behavior: smooth;
+   overflow: hidden;
+
+   font-size: 1em;
+   line-height: 1.4;
+}
+/*#endregion*/
+
+/*#region Grid*/
+ /* ==========================================================================
+    Grid
+
+
+   ========================================================================== */
+body {
+   display: grid;
+
+   grid-template-columns: var(--side-bar-width) auto;
+   grid-template-rows: var(--top-bar-height) auto auto;
+   grid-template-areas:
+      "topbar topbar"
+      "sidebar content"
+      "sidebar views";
+
+   height: 100vh;
+   width: 100%;
+
+   background-color: var(--website-background);
+   color: var(--text-color-dark);
+}
+/*#endregion*/
+
+/*#region Sidebar*/
+ /* ==========================================================================
+    Sidebar
+
+
+   ========================================================================== */
+
+#sidebar {
+   grid-area: sidebar;
+
+   height: 100hv;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   align-content: space-between;
+
+   padding: var(--spacing);
+
+   background-color: var(--sidebar-color);
+   border-right: var(--primary-color) solid 1px;
+}
+
+ #backwards-button, #forward-button{
+   margin-top: var(--spacing);
+}
+
+#settings-button {
+   margin-top: auto;
+}
+/*#endregion*/
+
+/*#region Topbar*/
+ /* ==========================================================================
+   Topbar
+
+   ========================================================================== */
+#topbar {
+   grid-area: topbar;
+
+   display: flex;
+   justify-content: space-between;
+   align-items: row;
+
+   position: -webkit-sticky;
+   position: sticky;
+   top: 0;
+
+   width: 100%;
+
+   z-index: 10;
+
+   padding: var(--spacing);
+
+   background-color: var(--topbar-color);
+   border-bottom: var(--secondary-color) solid 1px;
+}
+
+#thws-logo{
+   align-self: flex-start;
+   height: 80%;
+}
+
+/*#region File selection*/
+ /*
+   File selection
+ */
+
+#file-selection {
+   display: flex;
+   justify-content: right;
+   align-items: center;
+
+   position: -webkit-sticky;
+   position: sticky;
+   top: 0;
+
+   z-index: 0;
+
+   padding: var(--spacing);
+
+   background-color: var(--topbar-color);
+}
+
+#file-selection-div {
+   display: flex;
+   flex-direction: row;
+}
+
+#file-selection-text {
+   display: flex;
+   flex-direction: column;
+}
+
+#file-code {
+   display: flex;
+   flex-direction: row;
+   align-content: space-around;
+   align-items: center;
+}
+
+#file-selection-expand {
+   transform: rotate(180deg);
+   margin: var(--spacing);
+}
+
+[contenteditable="true"].editable-line {
+   white-space: nowrap;
+   width: 150px;
+   overflow: hidden;
+}
+[contenteditable="true"].editable-line br {
+   display: none;
+
+}
+[contenteditable="true"].editable-line * {
+   display: inline;
+   white-space: nowrap;
+}
+/*#endregion*/
+/*#endregion*/
+
+/*#region Content*/
+ /* ==========================================================================
+    Content
+
+
+   ========================================================================== */
+#content {
+   grid-area: content;
+
+   width: 100%;
+   height: auto;
+
+   display: flex;
+   flex-direction: column;
+
+   background-color: var(--website-background);
+}
+/*#endregion*/
+
+/*#region Simulator*/
+ /* ==========================================================================
+    Simulator
+
+
+   ========================================================================== */
+#simulator {
+   width: 100%;
+
+   border-bottom: var(--secondary-color) solid 1px;
+}
+
+#simulator-tape {
+   height: 250px;
+
+   display: flex;
+   flex-direction: row;
+   align-content: space-around;
+   align-items: center;
+   justify-content: center;
+}
+
+#simulator-controls {
+   height: 60px;
+
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+
+   padding: var(--spacing);
+}
+
+#speed-controls {
+   display: flex;
+   flex-direction: column;
+}
+/*#endregion*/
+
+/*#region Simulator input*/
+ /* ==========================================================================
+    Simulator input
+
+
+   ========================================================================== */
+#simulator-input {
+   height: auto;
+
+   display: flex;
+   flex-direction: row;
+   align-content: space-around;
+   align-items: center;
+   justify-content: center;
+
+   margin: var(--spacing);
+}
+/*#endregion*/
+
+/*#region Views (protocol view, diagram view)*/
+/* ==========================================================================
+Footer
+
+
+   ========================================================================== */
+#views {
+   /*grid-area: views;*/
+   height: 30px;
+   width: calc(100vw - var(--side-bar-width));
+
+   /*align-self: flex-end;
+   justify-self: flex-end;
+   place-self: flex-end;*/
+
+   display: flex;
+   flex-direction: column;
+
+   position: fixed;
+   bottom: 0;
+   left: var(--side-bar-width);
+   resize: vertical;
+
+   transition: height 0s ease-in-out;
+
+   background-color: var(--secondary-color);
+}
+
+#views.expanded #view-tabs {
+   cursor: n-resize;
+}
+
+#view-tabs {
+   display: flex;
+   flex-direction: row;
+   align-content: space-evenly; /*FIXME: space-between is not working, so one element is at the left the other on the right*/
+   align-items: center;
+}
+
+#protocol-view-button, #diagram-view-button {
+   display: flex;
+   margin-left: var(--spacing);
+   
+   cursor: pointer;
+}
+
+#diagram-view-button {
+   margin-left: 46%;
+}
+
+#protocol-view-button img, #diagram-view-button img {
+   margin-right: 5px;
+}
+
+#protcol-view, #diagram-view {
+   overflow: visible;
+
+   width: 100%;
+   flex-shrink: 50%;
+
+   padding: var(--spacing);
+
+   background-color: var(--secondary-color);
+}
+
+#protcol-view {
+   border-right: #666666 solid 1px;
+}
+
+#views-view-area {
+   display: flex;
+   flex-direction: row;
+   align-content: space-around; 
+   align-items: start;
+
+   overflow: auto;
+}
+/*#endregion*/
